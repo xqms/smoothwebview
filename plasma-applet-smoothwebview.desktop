@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=Smooth WebView
+Type=Service
+
+ServiceTypes=Plasma/Applet
+X-KDE-Library=plasma_applet_smoothwebview
+X-KDE-PluginInfo-Author=Max Schwarz
+X-KDE-PluginInfo-Email=Max@x-quadraht.de
+X-KDE-PluginInfo-Name=smoothwebview
+X-KDE-PluginInfo-Version=0.1
+X-KDE-PluginInfo-Website=http://plasma.kde.org/
+X-KDE-PluginInfo-Category=Online Services
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-License=GPL
+
