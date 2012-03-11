@@ -1,32 +1,14 @@
-Plasma Applet Template
-----------------------
+SmoothWebView
+=============
 
-You need KDE 4.2
+Small web view which does everything you would expect from a desktop widget:
 
--- Build instructions --
+- If you click on real links taking you to a new location, your browser is
+  opened
+- It has an auto-refresh option, but does not "twitch" during update as
+  the stock web browser plasmoid does
+- You can simply invert the colors to blend the website in (e.g. google
+  calendar)
+- When the mouse is inside the plasmoid, auto-refresh is turned off
 
-cd /where/your/applet/is/installed
-mkdir build
-cd build
-cmake -DCMAKE_INSTALL_PREFIX=$KDEDIRS .. 
-make 
-make install
-
-(your $KDEDIRS is where you install your KDE 4)
-
-Restart plasma to load the applet 
-kquitapp plasma
-plasma
-
-or view it with 
-plasmoidviewer YourAppletName
-
-You might need to run kbuildsycoca4
-in order to get the .desktop file recognized.
-
--- Tutorials and resources --
-The explanation of the template
-http://techbase.kde.org/index.php?title=Development/Tutorials/Plasma/GettingStarted
-
-Plasma techbase pages
-http://techbase.kde.org/Projects/Plasma
+For screenshots see http://kde-look.org/content/show.php?content=129068
