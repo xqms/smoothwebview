@@ -41,6 +41,7 @@ class SmoothWebView : public Plasma::Applet
 		void updateColors();
 		void updateScrollBars();
 
+		void reload();
 	private:
 		KWebView *m_webView;
 		QGraphicsProxyWidget *m_proxy;

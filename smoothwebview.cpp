@@ -301,9 +301,9 @@ void SmoothWebView::configAccepted()
 void SmoothWebView::updateTimerConnection()
 {
 	if(m_doRefresh)
-		connect(m_timer, SIGNAL(timeout()), m_webView, SLOT(reload()), Qt::UniqueConnection);
+		connect(m_timer, SIGNAL(timeout()), this, SLOT(reload()), Qt::UniqueConnection);
 	else
-		disconnect(m_timer, SIGNAL(timeout()), m_webView, SLOT(reload()));
+		disconnect(m_timer, SIGNAL(timeout()), this, SLOT(reload()));
 }
 
 void SmoothWebView::updateColors()
@@ -344,6 +344,14 @@ void SmoothWebView::updateScrollBars()
 		frame->setScrollBarPolicy(Qt::Horizontal, Qt::ScrollBarAsNeeded);
 		frame->setScrollBarPolicy(Qt::Vertical, Qt::ScrollBarAsNeeded);
 	}
+}
+
+void SmoothWebView::reload()
+{
+	if(m_webView->url().isEmpty())
+		m_webView->load(m_url);
+	else
+		m_webView->reload();
 }
 
 #include "smoothwebview.moc"
